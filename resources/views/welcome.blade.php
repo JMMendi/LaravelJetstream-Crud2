@@ -31,4 +31,9 @@
             @endforeach
         </div>
     </x-self.base>
+    @session('mensaje')
+        <script>
+            Swal.fire("{{session('mensaje')}}");
+        </script>
+    @endsession
 </x-app-layout>

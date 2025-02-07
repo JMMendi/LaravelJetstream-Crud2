@@ -12,11 +12,17 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                    <i class="fa-solid fa-gauge mr-1"></i>{{ __('Dashboard') }}
-                    </x-nav-link>
-                    <x-nav-link href="{{ route('showuserposts') }}" :active="request()->routeIs('showuserposts')">
-                    <i class="fa-solid fa-gear mr-1"></i>Posts
+                    @auth
+                        <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
+                            <i class="fa-solid fa-gauge mr-1"></i>{{ __('Dashboard') }}
+                        </x-nav-link>
+                        <x-nav-link href="{{ route('showuserposts') }}" :active="request()->routeIs('showuserposts')">
+                            <i class="fa-solid fa-gear mr-1"></i>Posts
+                        </x-nav-link>                       
+                    @endauth
+
+                    <x-nav-link href="{{ route('contacto.pintar') }}" :active="request()->routeIs('contacto.pintar')">
+                        <i class="fa-solid fa-envelope mr-1"></i>Contáctanos
                     </x-nav-link>
                 </div>
             </div>
