@@ -30,6 +30,7 @@
             </article>
             @endforeach
         </div>
+        {{$posts->links()}}
     </x-self.base>
     @session('mensaje')
         <script>

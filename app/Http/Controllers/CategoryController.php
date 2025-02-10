@@ -12,7 +12,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        $categorias = Category::orderBy('nombre')->get();
+        return view('categories.index', compact('categorias'));
     }
 
     /**
@@ -20,7 +21,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('categories.create');
     }
 
     /**
@@ -28,7 +29,11 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate($this->rules());
+
+        Category::create($request->all());
+
+        return redirect()->route('categories.index')->with('mensaje', 'Cateogría creada con éxito');
     }
 
     /**
@@ -44,7 +49,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        //
+        return view('categories.edit', compact('category'));
     }
 
     /**
@@ -52,7 +57,11 @@ class CategoryController extends Controller
      */
     public function update(Request $request, Category $category)
     {
-        //
+        $request->validate($this->rules($category->id));
+
+        $category->update($request->all());
+
+        return redirect()->route('categories.index')->with('mensaje', 'Categoría editada correctamente');
     }
 
     /**
@@ -60,6 +69,15 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
+
+        return redirect()->route('categories.index')->with('mensaje', 'Categoría eliminada correctamente');
+    }
+
+    private function rules(?int $id = null) : array {
+        return [
+            'nombre' => ['required', 'string', 'min:3', 'max:50', 'unique:categories,nombre,'.$id],
+            'color' => ['required', 'color_hex'],
+        ];
     }
 }

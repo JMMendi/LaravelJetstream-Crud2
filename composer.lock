@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8e00e0989d2568f386b38ef4b7ab15d4",
+    "content-hash": "8b57545c0d376bf75ff1f77914f59abb",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -1220,6 +1220,71 @@
                 }
             ],
             "time": "2023-12-03T19:50:20+00:00"
+        },
+        {
+            "name": "kaishiyoku/laravel-color-validation",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kaishiyoku/laravel-color-validation.git",
+                "reference": "b8268356c5c1cbd1a2ff9db15dd919014d304d3c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Kaishiyoku/laravel-color-validation/zipball/b8268356c5c1cbd1a2ff9db15dd919014d304d3c",
+                "reference": "b8268356c5c1cbd1a2ff9db15dd919014d304d3c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^10.0|^11.0",
+                "illuminate/validation": "^10.0|^11.0",
+                "php": "^8.1",
+                "spatie/regex": "^3.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^8.0",
+                "pestphp/pest": "^2.34",
+                "pestphp/pest-plugin-laravel": "^2.3",
+                "phpunit/phpunit": "^10.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Kaishiyoku\\Validation\\Color\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Kaishiyoku\\": "src/Kaishiyoku"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kaishiyoku",
+                    "email": "dev@andreas-wiedel.de",
+                    "homepage": "https://andreas-wiedel.de",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Laravel  color validation rules",
+            "homepage": "https://github.com/Kaishiyoku/laravel-color-validation",
+            "keywords": [
+                "color",
+                "laravel",
+                "validation rules",
+                "validator"
+            ],
+            "support": {
+                "issues": "https://github.com/Kaishiyoku/laravel-color-validation/issues",
+                "source": "https://github.com/Kaishiyoku/laravel-color-validation/tree/3.1.0"
+            },
+            "time": "2024-03-11T22:14:00+00:00"
         },
         {
             "name": "laravel/fortify",
@@ -4026,6 +4091,69 @@
                 }
             ],
             "time": "2024-04-27T21:32:50+00:00"
+        },
+        {
+            "name": "spatie/regex",
+            "version": "3.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/regex.git",
+                "reference": "d543de2019a0068e7b80da0ba24f1c51c7469303"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/regex/zipball/d543de2019a0068e7b80da0ba24f1c51c7469303",
+                "reference": "d543de2019a0068e7b80da0ba24f1c51c7469303",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.0|^8.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Regex\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian De Deyne",
+                    "email": "sebastian@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A sane interface for php's built in preg_* functions",
+            "homepage": "https://github.com/spatie/regex",
+            "keywords": [
+                "expression",
+                "expressions",
+                "regex",
+                "regular",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/regex/issues",
+                "source": "https://github.com/spatie/regex/tree/3.1.1"
+            },
+            "funding": [
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-11-30T21:13:59+00:00"
         },
         {
             "name": "symfony/clock",
